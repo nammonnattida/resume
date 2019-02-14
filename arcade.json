@@ -1,0 +1,32 @@
+﻿{
+	"name": "5810513012",
+	"version": "1.0.0.0",
+	"description": "",
+	"id": "com.nammon.salamrunner",
+	"viewport-width": 1138,
+	"viewport-height": 640,
+	"author": "nattida",
+	"email": "nattida_ml@hotmail.com",
+	"website": "",
+	"orientations": "any",
+	"c2version": "265",
+	"used-plugins": [
+		"Arr",
+		"Browser",
+		"Keyboard",
+		"Mouse",
+		"Sprite",
+		"SpriteFontPlus",
+		"Text",
+		"TextBox",
+		"TiledBg",
+		"Touch"
+	],
+	"used-behaviors": [
+		"Fade",
+		"Flash",
+		"Platform",
+		"scrollto",
+		"solid"
+	]
+}
