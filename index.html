@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Nattida Boontharaksa</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel='stylesheet' href='font/stylesheet.css'>
+  <link rel="stylesheet" href="templete/font_awesome_min.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="jquery_min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+  <script src="js/vendor/jquery.hashchange.min.js"></script>
+  <script src="js/vendor/jquery.easytabs.min.js"></script>
+  <script src="js/main.js"></script>
+  <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+      <![endif]-->
+  <body class="bg-fixed bg-1">
+</head>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "krr_aengaeiregular", sans-serif}
+.container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  background: #2B343A;
+  padding: 0 10%;
+  border-radius: 2px;
+}
+.container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+
+#timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  height: 100%;
+  width: 4px;
+  background: #7E57C2;
+}
+@media only screen and (min-width: 1170px) {
+  #timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.timeline-block:first-child {
+  margin-top: 0;
+}
+.timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .timeline-block {
+    margin: 4em 0;
+  }
+  .timeline-block:first-child {
+    margin-top: 0;
+  }
+  .timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-img {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #7E57C2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.timeline-img {
+  background: #673AB7;
+}
+@media only screen and (min-width: 1170px) {
+  .timeline-img {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 15px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+.timeline-content {
+  position: relative;
+  margin-left: 60px;
+  margin-right: 30px;
+  background: #333C42;
+  border-radius: 2px;
+  padding: 1em;
+  .timeline-content-info {
+    background: #2B343A;
+    padding: 5px 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    i {
+      margin-right: 5px;
+    }
+    .timeline-content-info-title, .timeline-content-info-date {  
+      width: calc(50% - 2px);
+      display: inline-block;
+    }
+    @media (max-width: 500px) {
+      .timeline-content-info-title, .timeline-content-info-date {  
+        display: block;
+        width:100%;
+      } 
+    }
+  }
+  .content-skills {
+    font-size: 12px;
+    padding:0;
+    margin-bottom: 0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      background: #40484D;
+      border-radius: 2px;
+      display: inline-block;
+      padding: 2px 10px;
+      color: rgba(255,255,255,0.7);
+      margin: 3px 2px;
+      text-align: center;
+      flex-grow: 1;
+    }
+  }
+}
+.timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.timeline-content h2 {
+  color: rgba(255,255,255,.9);
+  margin-top:0;
+  margin-bottom: 5px;
+}
+.timeline-content p, .timeline-content .date {
+  color: rgba(255,255,255,.7);
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+.timeline-content .date {
+  display: inline-block;
+}
+.timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #333C42;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .timeline-content .read-more, .timeline-content .date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .timeline-content {
+    color: white;
+    margin-left: 0;
+    padding: 1.6em;
+    width: 36%;
+    margin: 0 5%
+  }
+  .timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #333C42;
+  }
+  .timeline-content .date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 6px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-block:nth-child(even) .timeline-content {
+    float: right;
+  }
+  .timeline-block:nth-child(even) .timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #333C42;
+  }
+  .timeline-block:nth-child(even) .timeline-content .read-more {
+    float: right;
+  }
+  .timeline-block:nth-child(even) .timeline-content .date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+}
+</style>
+
+<!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+   <div class="main-container">
+    <div class="main wrapper clearfix">
+    	<div style="background-color: DodgerBlue">
+      <!-- Header Start -->
+        <header id="header">
+            <div id="logo">
+                <h2>
+                    Nattida Boontharaksa
+                </h2>
+                <h4>
+                   <font color="white">  Senior / Information Systems </font>
+                </h4>
+            </div>
+        </header>
+        <!-- Header End -->
+        <!-- Main Tab Container -->
+         <div id="tab-container" class="tab-container">
+          <!-- Tab List -->
+            <ul class='etabs'>
+                <li class='tab' id="tab-about">
+                  <a href="#about"><i class="icon-user"></i><span><h4> About Me</h4></span></a>
+                </li>
+                <li class='tab'>
+                  <a href="#resume"><i class="icon-file-text"></i><span><h4> Resume</h4></span></a>
+                </li>
+                <li class='tab'>
+                  <a href="#portfolio"><i class="icon-heart"></i><span><h4> Portfolio</h4></span></a>
+                </li>
+                <li class='tab'>
+                  <a href="#timeline"><i class="icon-envelope"></i><span><h4> Timeline</h4></span></a>
+                <li class='tab'>
+                  <a href="#contact"><i class="icon-envelope"></i><span><h4> Contact</h4></span></a>
+                </li>
+            </ul>
+          <!-- End Tab List -->
+            <div id="tab-data-wrap">
+              <!-- About Tab Data -->
+                <div id="about">
+                    <section class="clearfix">
+                        <div class="g2">
+                            <div class="photo">
+                                <img src="image/nammon4.gif" style="width:100%" alt="Nammon">
+                            </div>
+                            <div class="info">
+                                <h2>
+                                    Nammon Nattida
+                                </h2>
+                                <h3>
+                                    Information Systems 
+                                </h3>
+                                <h4>
+                                      * ถ้าคนอื่นทำได้เราก็ทำได้อย่าพูดว่าทำไม่ได้ถ้ายังไม่ได้ "พยายาม"
+                                      
+                                      <br>* ความใฝ่ฝันในชีวิตคือการได้เป็น Programmer เพราะชอบการเขียนโปรแกรม
+                                    ถึงแม้จะเขียนไม่ค่อยเก่งหรือเขียนได้แค่ไม่กี่ภาษาแต่ก็จะพยายามพัฒนา ปรับปรุงตัวเองไปเรื่อยๆ แต่ถ้าไม่ได้ในงาน Programmer ก็ยังอยากทำงานในด้านสายงานเกี่ยวกับสารสนเทศไม่ว่าจะเป็นในส่วนของ 
+                                  System Analyst,System Admin และ Android Developer                                                          
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="g1">
+                            <div class="main-links sidebar">
+                                <ul>
+                                    <li>
+                                        <a href="#resume"><h4><font color="red">View My Resume</h4></a></font>
+                                    </li>
+                                    <li>
+                                        <a href="#portfolio"><h4><font color="red">My Portfolio</h4></a></font>
+                                    </li>
+                                    <li>
+                                        <a href="#timeline"><h4><font color="red">My Timeline</h4></a></font>
+                                    </li>
+                                    <li>
+                                        <a href="#contact"><h4><font color="red">Hire me for your next project</h4></a></font>
+                                    </li>
+                                    <li>
+                                        <a href="#features"><h4><font color="red">Features</h4></a></font>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="break"></div>
+                        <div class="contact-info">
+                          <div class="g1">
+                            <div class="item-box clearfix">
+                              <i class="icon-envelope"></i>
+                              <div class="item-data">
+                                <a href="mailto:nattida_ml@hotmail.com"><h4>nattida_ml@hotmail.com</a></h4>
+                                <p><h3>Email Address</p></h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="g1">
+                            <div class="item-box clearfix">
+                              <i class="icon-facebook"></i>
+                              <div class="item-data">
+                                <a href="https://www.facebook.com/Nammon.Nattida"><h4>Nammon Nattida</a></h4>
+                                <p><h3>Facebook Profile</h3></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="g1">
+                            <div class="item-box clearfix">
+                              <i class="icon-twitter"></i>
+                              <div class="item-data">
+                                <a href="http://line.me/ti/p/~nammonnattida"><h4>nammonnattida</a></h4>
+                                <p><h3>Line ID</h3></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </section><!-- content -->
+                </div>
+              <!-- End About Tab Data -->
+              <!-- Resume Tab Data -->
+              <div style="background-color: MediumTurquoise">
+                <div id="resume">
+                    <section class="clearfix">
+                        <div class="g2">
+                            <h3>
+                                Work Experience
+                            </h3>
+                            <ul class="no-list work">
+                                <li>
+                                    <h4>
+                                        Project Information Systems 
+                                    <span class="label label-info">2018-ปัจจุบัน</span></h4>
+                                    <p>
+                                      <h4>
+                                         <dd> ได้เริ่มทำโปรเจค Contunuing MICE Performance App (CMP) ขึ้นมาเพื่อการศึกษา </dd>
+
+                                        ของนักศึกษาคณะวิทยาการจัดการ สาขา วิชาการจัดการประชุมนิทรรศการ และการท่องเที่ยวเพื่อเป็นรางวัล ซึ่งในตัวAppที่สร้างขึ้นมานั้นจะมีฟังก์ชั่นการบันทึึกการฝึกงานของนักศึกษาที่ไปฝึกกับทางศูนย์ประชุมนานาชาติฉลองสิริราชสมบัติครบ 60 ปีและประเมินผลการฝึกงาน                                       
+                                      </h4> 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>MULTIMEDIA & APPLICATIONS
+                                    <span class="label label-info">2018-ปัจจุบัน</span></h4>
+                                    <p>
+                                      <h4>
+                                         * ได้มีการฝึกการทำโลโก้โดยใช้โปรแกรมต่างๆ เช่น Powerpoint, Photoshop, Photoscape เป็นต้น
+                                         <p><center><img src="image/bis3.jpg" style="width:25%"> &nbsp; <img src="image/bis4.jpg" style="width:25%">
+                                          &nbsp; <img src="image/fms1.jpg" style="width:25%">
+                                          <img src="image/fms3.jpg" style="width:25%"> &nbsp; <img src="image/photo5.jpg" style="width:25%">
+                                          &nbsp; <img src="image/photo6.jpg" style="width:25%"></center>
+                                        </p>
+                                        * ได้มีการฝึกทำฟ้อนต์เป็นของตัวเองด้วยโปรแกรม FontCreater
+                                         <p><center><img src="image/font.jpg" style="width:70%"></center></p>
+                                        * ได้มีการฝึกทำ banner เพื่อใช้ในโอกาสต่างๆ
+                                         <p><center><img src="image/brother.gif" style="width:25%" ></center></p>                 
+                                        * ได้มีการฝึกทำ ไอคอน 
+                                         <p><center><img src="image/one.jpg" style="width:100%" ></center></p> 
+                                        * ได้ตัดต่อวิดีโอด้วยโปรแกรม 
+                                        <p>
+                                        * ได้มีการทำภาพ 360 องศา
+                                        <center><iframe src="panorama/index.html" height="300" width="500" ></iframe></center>
+                                        </p>
+                                        * ได้มีการทำสิ่งของ 180 องศา
+                                        <center><iframe src="object/index.html" height="500" width="500" ></iframe></p></center>
+                                        <p>* ได้สร้างนาฬิกาเป็นของตัวเอง
+                                        <center><iframe src="clock/index.html" height="500" width="500" ></iframe></center></p>
+                                        * ได้สร้างเกมส์แนว Platform โดยโปรแกรม constuct2 
+                                        <center><iframe src="game/index.html" height="300" width="500" ></iframe></center>
+                                </li>
+                                <li>
+                                    <h4>Other
+                                    <span class="label label-info">2017-2018</span></h4>
+                                    <p>
+                                      <h4>
+                                         * ได้มีการฝึกเขียนโปรแกรมด้วยภาษา HTML5
+                                         <center><iframe src="work/one/application.html" height="300" width="500" ></iframe></p></center>
+                                         <p>* ได้มีการฝึกสร้าง resume แบบ offline</p>
+                                         <center><iframe src="work/two/index.html" height="300" width="900" ></iframe></p></center>
+                                         <p>* ได้ฝึกฝนการคิด database ไม่ว่าจะเป็นในส่วน er diagram, usecase</p>
+                                         <center><img src="work/er.jpg" style="width:75%"></center>
+                                         <center><iframe src="work/usecase.pdf" height="300" width="500" ></iframe></center></p>
+                                         <p>* ได้ฝึกทำweb app แต่ยังไม่ได้ลงลึกด้านฐานข้อมูล</p>
+                                         <center><iframe src="work/tree/Project/index.html" height="500" width="900" ></iframe></p></center>
+                                         <p>* ได้คิดค้นนวัตกรรมใหม่ชื่อ แอพให้คำปรึกษา</p>
+                                         <center><iframe src="work/inno.pdf" height="280" width="500" ></iframe></center></p>
+                                         <p>* ได้มีการสร้างเว็บ ถนนนางงาม เพื่อเป็นการโปรโมทการท่องเที่ยวในจังหวัดสงขลา</p>
+                                         <center><iframe src="work/four/index.html" height="500" width="800" ></iframe></center></p>
+                                </li>                  
+                                <h3>
+                                Education
+                                </h3>
+                                <ul class="no-list work">
+                                  <li>
+                                    <h4>MOBILE APP PROGRAMMING, INFORMATION RETRIEVAL, DATA WAREHOUSING & DATA MININGม SYSTEM ANALYSIS & DESIGN
+                                    <span class="label label-info">2017-2018</span></h4>
+                                    <p><h4>
+                                        * ได้มีการฝึกเขียนภาาาต่างๆไม่ว่าจะเป็น HTML5, w3.css, Javascript </p>
+                                        <p>* ได้เรียนรู้การค้นคืนข้อมูล วิธีการค้นว่าค้นข้อมูลอย่างไรให้เร็ว และรู้หลักการในการค้น</p>
+                                        <p>* ได้รู้จักการวิเคราะห์ข้อมูลเพื่อทำ Data analysis เรียนรู้เรื่องคลังข้อมูลและเหมืองข้อมูล</p>
+                                        <p>* ได้เรียนรู้การวิเคราะห์และออกแบบระบบ</p>
+                                    </p></h4>
+                                </li>
+                                <li>
+                                    <h4>
+                                        COMPUTING PLATFORM TECHNO, COMPUTER PROGRAMMING, DATA COMMUNI & COM NETWORK, DATABASE SYSTEM
+                                    <span class="label label-info">2016-2017</span></h4>
+                                    <p><h4>
+                                        <p>* ได้เรียนรู้หลักการทำงานของคอมพิวเตอร์ในแพลตฟอร์มต่างๆ</p>
+                                        <p>* ได้ฝึกเขียนโปรแกรมด้วยภาษา Python </p>
+                                        <p>* ได้เรียนรู้เรื่อง Network ต่างๆว่ามีกี่แบบมีการรับส่งข้อมูลอย่างไร</p>
+                                        <p>* ได้เรียนรู้เรื่องฐานข้อมูล ว่าต้องจัดเก็บอย่างไร จัดการอย่างไรให้มีประสิทธิภาพมากที่สุดและเชื่อมต่อฐานข้อมูลกับระบบอย่างไร</p>
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        PROGRAM LOGIC & DATA STRUCT, FOUND OF INFOMATION SYS
+                                    <span class="label label-info">2015-2016</span></h4>
+                                    <p><h4>
+                                        <p>* ได้เรียนรู้ Logic ของการเขียนโปรแกรมว่าต้องเริ่มจากอะไรยังไงบ้าง</p>
+                                        <p>* ได้เรียนรู้พื้นฐานของInformation Systems</p>
+
+                                    </p></h4>
+                                </li>
+                              </ul>
+                            
+                        </div>
+                        <div class="g1">
+                            <div class="sidebar">
+                                <h3>
+                                    Skills
+                                </h3>
+                                <h5>
+                                    Software
+                                </h5>
+                                <div class="meter emerald">
+                                    <span style="width: 33.3%"><span>Photoshop</span></span>
+                                </div>
+                                <div class="meter carrot">
+                                    <span style="width: 40%"><span>Illustrator</span></span>
+                                </div>
+                                <div class="meter sunflower">
+                                    <span style="width: 60%"><span>Photoscape</span></span>
+                                </div>
+                                <div class="meter midnight">
+                                    <span style="width: 65%"><span>Google Creater</span></span>
+                                </div>
+                                <div class="meter pomengrate">
+                                    <span style="width: 75%"><span>Microsoft Office</span></span>
+                                </div>
+                                <div class="meter asbestos">
+                                    <span style="width: 70%"><span>xampp</span></span>
+                                </div>
+                                <div class="meter wisteria">
+                                    <span style="width: 50%"><span>Font Creater</span></span>
+                                </div>
+                                <div class="break"></div>
+                                <h5>
+                                    Design
+                                </h5>
+                                <div class="meter emerald">
+                                    <span style="width: 40%"><span>User Interface</span></span>
+                                </div>
+                                <div class="meter carrot">
+                                    <span style="width: 80%"><span>Mobile Application</span></span>
+                                </div>
+                                <div class="meter wisteria">
+                                    <span style="width: 60%"><span>Web Applications</span></span>
+                                </div>
+                                <div class="break"></div>
+                                <h5>
+                                    Programming Language
+                                </h5>
+                                <div class="meter emerald">
+                                    <span style="width: 75%"><span>HTML5/CSS</span></span>
+                                </div>
+                                <div class="meter carrot">
+                                    <span style="width: 50%"><span>PHP/MySql</span></span>
+                                </div>
+                                <div class="meter wisteria">
+                                    <span style="width: 40%"><span>jQuery/JavaScript</span></span>
+                                </div>
+                                <div class="meter sunflower">
+                                    <span style="width: 30%"><span>Javascript</span></span>
+                                </div>
+                                <div class="meter asbestos">
+                                    <span style="width: 85%"><span>Python</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+              <!-- End Resume Tab Data -->
+              <!-- Portfolio Tab Data -->
+                <div id="portfolio">
+                      <section class="clearfix">
+                        <div class="g3">
+                            <h4>
+                                <p>* เริ่มเข้าปี 1 ได้ร่วมทำกิจกรรมกับทางคณะและสาขา</p>
+                            </h4>
+                            <center><img src="image/1.jpg" width="30%" height="30%">&nbsp; <img src="image/2.jpg" style="width:29.5%"></center>
+                        </div>
+                        <div class="g3">
+                            <h4>
+                                <p>* ปี 2 เริ่มลงค่ายสมัครเป็นพี่zone เพื่อควบคุมและดูแลน้องๆปี 1 </p>
+                            </h4>
+                            <center><img src="image/3.jpg" width="30%" height="30%">&nbsp; <img src="image/4.jpg" style="width:50%"></center>
+                        </div>
+                        <div class="g3">
+                            <h4>
+                                <p>* ปี 3 เริ่มออกบำเพ็ญประโยชน์โดยการตั้งโครงการปลูกจินตนาการเพื่อผู้พิการทางสายตาและทำการรวบรวมเงินเพื่อสมทบทุนให้น้องๆ </p>
+                            </h4>
+                            <center><img src="image/5.jpg" width="30%" height="30%">&nbsp; <img src="image/6.jpg" style="width:17%">&nbsp; <img src="image/7.jpg"style="width:30%"></center>
+                        </div>
+                        <div class="break"></div>
+                        <div class="g3">
+                            <h4>
+                                <p>* ฝึกทักษะโดยการรับงาน Part-time เพื่อฝึกฝนและพัฒนาตนเอง ไม่ว่าจะเป็นงานล้างจาน พนักงานเสิร์ฟหรือพนักงงานขายก็ตาม </p>
+                            </h4>
+                            <center><img src="image/8.jpg" width="30%" height="30%">&nbsp; <img src="image/9.jpg" style="width:20.5%">&nbsp; <img src="image/10.jpg"style="width:20%"> &nbsp; <img src="image/11.jpg"style="width:30%">&nbsp; <img src="image/12.jpg"style="width:19.5%">&nbsp; <img src="image/13.jpg" style="width:30%"></center>
+                        </div>
+                    </section>
+                </div>
+              <!-- End Portfolio Data -->
+              <!-- timeline Tab Data -->
+                <div id="timeline" >
+                	<section class="clearfix"> 
+                			<div class="timeline-block">
+								<div class="timeline-img picture">
+								</div>
+
+								<div class="timeline-content">
+									<h2>เว็บไซต์เพื่อการเก็บชั่วโมงฝึกงานของนักศึกษาไมซ์ก่อนจะเป็นมืออาชีพ   </h2>
+       						<div class="timeline-content-info">
+          						<span class="timeline-content-info-title">
+           							<i class="fa fa-certificate" aria-hidden="true"></i>
+            						สร้าง website
+         						</span>
+        						<span class="timeline-content-info-date">
+            						<i class="fa fa-calendar-o" aria-hidden="true"></i>
+            						ปัจจุบัน
+          						</span>
+        					</div>
+									<p><h5><font color="white">ได้สร้าง Application เพื่อการศึกษาและได้ฝึกฝนการออกแบบ ER Diagram, Data flow, Context Diagram</p></h5></font>
+        					<ul class="content-skills">
+       						<font color="white"><h4><li>HTML5</li></font>
+        					<font color="white"><li>CSS3</li></font>
+        					<font color="white"><li>JavaScript</li></font>
+        					<font color="white"><li>jQuery</li></font>
+        					<font color="white"><li>Wordpress</li></h4></font>
+        					</ul>
+                  <span class="date"><p align = "left"><h4>&nbsp; &nbsp; &nbsp; &nbsp;Present</h4></p></span>
+								</div> <!-- cd-timeline-content -->
+							</div> <!-- cd-timeline-block -->
+
+							<div class="timeline-block">
+								<div class="timeline-img movie">
+								</div> <!-- cd-timeline-img -->
+								<div align="right">
+
+								<div class="timeline-content">
+								<div align="left">
+									<h2>ฝึกทักษะด้านมัลติมีเดีย</h2>
+									<p><h4><font color="white">ได้ฝึกskill ในการออกแบบ ตัดต่อ รวมไปถึงสร้างเกมส์แนว Platform</p></h4></font>
+									<span class="date"><h4>2018 Nov 30 </h4></span>
+								</div>
+								</div> <!-- cd-timeline-content -->
+							</div>
+							</div> <!-- cd-timeline-block -->
+
+							<div class="timeline-block">
+								<div class="timeline-img picture">
+								</div> <!-- cd-timeline-img -->
+
+								<div class="timeline-content">
+									<h2>ฝึกฝนด้านการเขียนภาาาต่างๆไม่ว่าจะเป็น Python, HTML5, W3.css, Java, PHP</h2>
+									<p><h4><font color="white">ได้ฝึกเขียนภาษาต่างๆออกมาเป็นหน้าเว็บ, mobile app ซึ่งได้ฝึกฝนการเขียนมาเรื่อยๆมาประมาณ 1-2 ปี</font></h4></p>
+									<span class="date"><h4>&nbsp; &nbsp; &nbsp; &nbsp;2018 May 30</h4></span>
+								</div> <!-- cd-timeline-content -->
+							</div> <!-- cd-timeline-block -->
+
+							<div class="timeline-block">
+								<div class="timeline-img location">
+								</div> <!-- cd-timeline-img -->
+								<div align="right">
+
+								<div class="timeline-content">
+								<div align="left">
+									<h2>Database</h2>
+									<p><h4><font color="white">ได้เรียนรู้การสร้างและการจัดการฐานข้อมูล ว่าควรทำอย่างไร จัดการอย่างไรฐานข้อมูลจึงจะนำมาใช้ประโยชน์ได้มากที่สุดและมีประสิทธิภาพมากที่สุด</font></h4></p>
+									<span class="date"><h4>2017 Nov 30</h4></span>
+								</div> <!-- cd-timeline-content -->
+							</div>
+							</div>
+							</div> <!-- cd-timeline-block -->
+
+							<div class="timeline-block">
+								<div class="timeline-img location">
+								</div> 
+
+								<div class="timeline-content">
+									<h2>Logic</h2>
+									<p><h4><font color="white">ได้ฝึกการคิดวิเคราะห์ระบบ ไม่ว่าจะเป็นการเริ่มจัดการกับความคิดเพื่อไปสร้างระบบว่าสิ่งใดควรทำก่อนหลัง</font></h4></p>
+									<span class="date"><h4>&nbsp; &nbsp; &nbsp; &nbsp;2017 May 30</h4></span>
+								</div> <!-- cd-timeline-content -->
+							</div> <!-- cd-timeline-block -->
+
+							<div class="timeline-block">
+								<div class="timeline-img movie">
+								</div> <!-- cd-timeline-img -->
+								<div align="right">
+
+								<div class="timeline-content">
+								<div align="left">
+									<h2>Information Systems</h2>
+									<p>ได้เรียนรู้พื้นฐานของระบบสารสนเทศไม่ว่าจะเป็นพื้นฐานหรือประเภทต่างๆ</p>
+									<span class="date"><h4>2016 Nov 30</h4></span>
+								</div> <!-- cd-timeline-content -->
+							    </div>
+						        </div>
+							</div> <!-- cd-timeline-block -->
+						</div>
+ 					</section>
+				</div>
+            
+              <!-- End timeline Data -->
+              <!-- Contact Tab Data -->
+                <div id="contact">
+                    <section class="clearfix">
+                       <div class="g1">
+                         <div class="sny-icon-box">
+                           <div class="sny-icon">
+                              <i class="icon-globe"></i>
+                            </div>
+                            <div class="item-box clearfix">
+                              <h4><center>My Address</h4></center>
+                              <p><h4><center>46 ม.3 ถ.กาญจนวนิช ต.ปริก อ.สะเดา จ.สงขลา 90120</center></h4></p>
+                            </div>
+                         </div>
+                       </div>
+                       <div class="g1">
+                         <div class="sny-icon-box">
+                           <div class="sny-icon">
+                              <i class="icon-phone"></i>
+                            </div>
+                            <div class="item-box clearfix">
+                              <h4><center>Mobile Number</h4></center>
+                              <p><a href="tel:0936875862"><h4><center>093-6875862</center></h4></a>
+                            </div>
+                         </div>
+                       </div>
+                       <div class="g1">
+                         <div class="sny-icon-box">
+                           <div class="sny-icon">
+                              <i class="icon-user"></i>
+                            </div>
+                            <div class="item-box clearfix">
+                              <h4><center>About Me</center></h4>
+                              <p><h4><center>ชอบและรักในสาขาที่เรียน จบไปอยากทำงานให้ตรงกับสายที่ตัวเองเรียน</center><h4></p>
+                            </div>
+                         </div>
+                       </div>
+                       <div class="break"></div>
+
+                    </section>
+                </div>
+              <!-- End Contact Data -->
+            </div>
+        </div>
+        <!-- End Tab Container -->
+        <footer>
+            <p>
+                ขอขอบคุณสำหรับผู้ที่เข้ามาอ่าน Resume ของดิฉันขอบคุณค่ะ
+            </p>
+        </footer>
+    </div><!-- #main -->
+</div><!-- #main-container -->
+
+</body>
+</html>
