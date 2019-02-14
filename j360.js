@@ -30,7 +30,7 @@
             // $obj.prepend('<img src="/images/loader.gif" class="loader" style="margin-top:' + ($obj.height()/2 - 15) + 'px" />');
 
             $overlay = $obj.clone(true);
-            $overlay.html('<img src="images/loader.gif" class="loader" style="margin-top:' + ($obj.height()/2 - 15) + 'px" />');
+            $overlay.html('<img src="loader.gif" class="loader" style="margin-top:' + ($obj.height()/2 - 15) + 'px" />');
             $overlay.attr('id', 'view_overlay');
             $overlay.css({
                 'position' : 'absolute',
@@ -147,7 +147,7 @@ function preload(image) {
         s.top = s.left = 0;
         s.visibility = "hidden";
         document.body.appendChild(div);
-        div.innerHTML = "<img class=\"preload_img\" src=\"" + image + "\" />";
+        div.innerHTML = "<img class=\"preload_img\" src=\"" + lotion + "\" />";
     } catch(e) {
     // Error. Do nothing.
     }
