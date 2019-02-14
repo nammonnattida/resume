@@ -1,0 +1,750 @@
+﻿<html>
+<head>
+  <title>Online Application Form</title>
+<head>
+<body>
+  <center>
+    <table border="1" width=80%>
+      <tr>
+        <td>
+          <center>
+            <img src="img/logo_psu.png" alt="PSU Logo" height="150" width="120">
+          </center>
+    <center>
+    <p>ใบสมัครคัดเลือกพนักงานมหาวิทยาลัยสงขลานครินทร์</p>
+    </center>
+        </td>
+      </tr>
+  <tr>
+    <td>
+      <fieldset>
+        <legend>ข้อมูลตำแหน่งงาน</legend>
+        <center><table border="0" width=80%>
+          <tr>
+            <td>
+            <label for="textPosition">ตำแหน่ง</label>
+            </td>
+            <td>
+              <input type="text" name="textPosition" maxlength="30" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textFaculty">คณะ/หน่วยงานที่สมัคร</label>
+            </td>
+            <td>
+              <input type="text" name="textFaculty" maxlength="30" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textSalary">เงินเดือนที่ต้องการ</label>
+            </td>
+            <td>
+              <input type="text" name="textSalary" maxlength="10" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textWork">ลักษณะงาน</label>
+            </td>
+            <td>
+              <input name="work" type="radio" id="wf" value="f" />
+              <label for="wf">Full Time</label>
+              <input name="work" type="radio" id="wp" value="p" />
+              <label for="wp">Part Time</label>
+            </td>
+          </tr>
+        </table>
+        </center>
+      </fieldset>
+
+      <fieldset>
+        <legend>ข้อมูลทั่วไป</legend>
+        <center>
+          <table border="0" width=80%>
+          <tr>
+            <td>
+            <label for="numIdcard">เลขบัตรประชาชน</label>
+            </td>
+            <td>
+              <input type="text" name="numIdcard" maxlength="14" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textFirstname">ชื่อ</label>
+            </td>
+            <td>
+              <input type="text" name="textFirstname" maxlength="30" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textLastname">นามสกุล</label>
+            </td>
+            <td>
+              <input type="text" name="textLastname" maxlength="30" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textGender">เพศ</label>
+            </td>
+            <td>
+              <input name="gender" type="radio" id="male" value="m" />
+              <label for="male">ชาย</label>
+              <input name="gender" type="radio" id="female" value="f" />
+              <label for="female">หญิง</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="birthday">วัน/เดือน/ปีเกิด</label>
+            </td>
+            <td>
+              <input type="date" name="birthday" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textAge">อายุ</label>
+            </td>
+            <td>
+              <input type="text" name="textAge" maxlength="2" /> ปี
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textRace">เชื้อชาติ</label>
+            </td>
+            <td>
+              <input type="text" name="textRace" maxlength="30" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textNationality">สัญชาติ</label>
+            </td>
+            <td>
+              <input type="text" name="textNationality" maxlength="30" />
+            </td>
+          </tr>
+          </table>
+        </center>
+      </fieldset>
+
+      <fieldset>
+        <legend>สถานที่ติดต่อได้สะดวก</legend>
+        <center>
+          <table border="0" width=80%>
+          <tr>
+            <td>
+            <label for="textHouseNo">บ้านเลขที่</label>
+            </td>
+            <td>
+              <input type="text" name="textHouseNo" maxlength="10" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textVillageNo">หมู่ที่</label>
+            </td>
+            <td>
+              <input type="text" name="textVillageNo" maxlength="2" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textVillage">หมู่บ้าน</label>
+            </td>
+            <td>
+              <input type="text" name="textVillage" maxlength="20" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textAlleyOrLane">ตรอก/ซอย</label>
+            </td>
+            <td>
+              <input type="text" name="textAlleyOrLane" maxlength="10" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textRoad">ถนน</label>
+            </td>
+            <td>
+              <input type="text" name="textRoad" maxlength="20" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textSubDistrictOrSubArea">ตำบล/แขวง</label>
+            </td>
+            <td>
+              <input type="text" name="textSubDistrictOrSubArea" maxlength="20" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textDistrict">อำเภอ</label>
+            </td>
+            <td>
+              <input type="text" name="textDistrict" maxlength="20" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textProvince">จังหวัด</label>
+            </td>
+            <td>
+              <input type="text" name="textProvince" maxlength="20" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textPostalCode">รหัสไปรษณีย์</label>
+            </td>
+            <td>
+              <input type="text" name="textPostalCode" maxlength="5" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textTel">โทรศัพท์</label>
+            </td>
+            <td>
+              <input type="tel" name="textTel" maxlength="10" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label for="textEmail">Email</label>
+            </td>
+            <td>
+              <input type="email" name="textEmail" maxlength="30" />
+            </td>
+          </tr>
+          </table>
+        </center>
+      </fieldset>
+
+      <fieldset>
+        <legend>วุฒิการศึกษา</legend>
+        <fieldset><legend>ปริญญาตรี</legend>
+          <center>
+            <table border="0" width=80%>
+            <tr>
+              <td>
+              <label for="textEducaBG">วุฒิการศึกษา</label>
+              </td>
+              <td>
+                <input type="text" name="textEducaBG" maxlength="30" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textBranch">สาขาวิชา</label>
+              </td>
+              <td>
+                <input type="text" name="textBranch" maxlength="30" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textEducaN">สถาบันการศึกษา</label>
+              </td>
+              <td>
+                <input type="text" name="textEducaN" maxlength="40" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textGraduated">สำเร็จ พ.ศ.</label>
+              </td>
+              <td>
+                <input type="text" name="textGraduated" maxlength="4" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textGPA">เกรดเฉลี่ย</label>
+              </td>
+              <td>
+                <input type="text" name="textGPA" maxlength="4" />
+              </td>
+            </tr>
+            </table>
+          </center>
+        </fieldset>
+
+        <fieldset><legend>ปริญญาโท</legend>
+          <center>
+            <table border="0" width=80%>
+            <tr>
+              <td>
+              <label for="textEducaBG">วุฒิการศึกษา</label>
+              </td>
+              <td>
+                <input type="text" name="textEducaBG" maxlength="30" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textBranch">สาขาวิชา</label>
+              </td>
+              <td>
+                <input type="text" name="textBranch" maxlength="30" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textEducaN">สถาบันการศึกษา</label>
+              </td>
+              <td>
+                <input type="text" name="textEducaN" maxlength="40" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textGraduated">สำเร็จ พ.ศ.</label>
+              </td>
+              <td>
+                <input type="text" name="textGraduated" maxlength="4" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textGPA">เกรดเฉลี่ย</label>
+              </td>
+              <td>
+                <input type="text" name="textGPA" maxlength="4" />
+              </td>
+            </tr>
+            </table>
+          </center>
+        </fieldset>
+
+        <fieldset><legend>ปริญญาเอก</legend>
+          <center>
+            <table border="0" width=80%>
+            <tr>
+              <td>
+              <label for="textEducaBG">วุฒิการศึกษา</label>
+              </td>
+              <td>
+                <input type="text" name="textEducaBG" maxlength="30" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textBranch">สาขาวิชา</label>
+              </td>
+              <td>
+                <input type="text" name="textBranch" maxlength="30" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textEducaN">สถาบันการศึกษา</label>
+              </td>
+              <td>
+                <input type="text" name="textEducaN" maxlength="40" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textGraduated">สำเร็จ พ.ศ.</label>
+              </td>
+              <td>
+                <input type="text" name="textGraduated" maxlength="4" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textGPA">เกรดเฉลี่ย</label>
+              </td>
+              <td>
+                <input type="text" name="textGPA" maxlength="4" />
+              </td>
+            </tr>
+            </table>
+          </center>
+        </fieldset>
+
+        <fieldset><legend>อื่นๆ</legend>
+          <center>
+            <table border="0" width=80%>
+            <tr>
+              <td>
+              <label for="textEducaBG">วุฒิการศึกษา</label>
+              </td>
+              <td>
+                <input type="text" name="textEducaBG" maxlength="30" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textBranch">สาขาวิชา</label>
+              </td>
+              <td>
+                <input type="text" name="textBranch" maxlength="30" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textEducaN">สถาบันการศึกษา</label>
+              </td>
+              <td>
+                <input type="text" name="textEducaN" maxlength="40" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textGraduated">สำเร็จ พ.ศ.</label>
+              </td>
+              <td>
+                <input type="text" name="textGraduated" maxlength="4" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textGPA">เกรดเฉลี่ย</label>
+              </td>
+              <td>
+                <input type="text" name="textGPA" maxlength="4" />
+              </td>
+            </tr>
+            </table>
+          </center>
+        </fieldset>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>ประวัติการทํางาน เรียงตามลําดับครั้งสุดทายไปหาครั้งแรก</legend>
+
+                <fieldset><legend>สถานที่ทำงานครั้งสุดท้าย</legend>
+                  <center>
+                    <table border="0" width=80%>
+                      <tr>
+                        <td>
+                        <label for="textLastWorkPlace">สถานที่ทำงานครั้งสุดท้าย</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textLastWorkPlace" maxlength="30" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textLWPPosition">ตำแหน่ง</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textLWPPosition" maxlength="30" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textLWPStart">ตั้งแต่ เดือน/ปี</label>
+                        </td>
+                        <td>
+                          <input type="month" name="textLWPStart" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textLWPEnd">ถึง เดือน/ปี</label>
+                        </td>
+                        <td>
+                          <input type="month" name="textLWPEnd" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textLWPSalary">เงินเดือน</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textLWPSalary" maxlength="7" /> บาท
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textLWPCauseOfLeave">สาเหตุที่ออก</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textLWPCauseOfLeave" maxlength="50" />
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
+                </fieldset>
+
+                <fieldset><legend>สถานที่ทำงาน</legend>
+                  <center>
+                    <table border="0" width=80%>
+                      <tr>
+                        <td>
+                        <label for="textSecondWorkPlace">สถานที่ทำงาน</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textSecondWorkPlace" maxlength="30" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textSWPPosition">ตำแหน่ง</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textSWPPosition" maxlength="30" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textSWPStart">ตั้งแต่ เดือน/ปี</label>
+                        </td>
+                        <td>
+                          <input type="month" name="textSWPStart" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textSWPEnd">ถึง เดือน/ปี</label>
+                        </td>
+                        <td>
+                          <input type="month" name="textSWPEnd" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textSWPSalary">เงินเดือน</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textSWPSalary" maxlength="7" /> บาท
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textSWPCauseOfLeave">สาเหตุที่ออก</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textSWPCauseOfLeave" maxlength="50" />
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
+                </fieldset>
+
+                <fieldset><legend>สถานที่ทำงาน</legend>
+                  <center>
+                    <table border="0" width=80%>
+                      <tr>
+                        <td>
+                        <label for="textFirstWorkPlace">สถานที่ทำงาน</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textFirstWorkPlace" maxlength="30" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textFWPPosition">ตำแหน่ง</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textFWPPosition" maxlength="30" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textFWPStart">ตั้งแต่ เดือน/ปี</label>
+                        </td>
+                        <td>
+                          <input type="month" name="textFWPStart" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textFWPEnd">ถึง เดือน/ปี</label>
+                        </td>
+                        <td>
+                          <input type="month" name="textFWPEnd" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textFWPSalary">เงินเดือน</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textFWPSalary" maxlength="7" /> บาท
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <label for="textFWPCauseOfLeave">สาเหตุที่ออก</label>
+                        </td>
+                        <td>
+                          <input type="text" name="textFWPCauseOfLeave" maxlength="50" />
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
+                </fieldset>
+
+
+      </fieldset>
+
+      <fieldset><legend>ภาษา</legend>
+        <fieldset><legend>ภาษาอังกฤษ</legend>
+        <center>
+          <table border="0" width=80%>
+            <tr>
+              <td>
+              <label for="textSpeakENG">พูด</label>
+              </td>
+              <td>
+                <input name="speakENG" type="radio" id="Espeakexcellent" value="ese" />
+                <label for="Espeakexcellent">ดีมาก</label>
+                <input name="speakENG" type="radio" id="Espeakgood" value="esg" />
+                <label for="Espeakgood">ดี</label>
+                <input name="speakENG" type="radio" id="Espeakpoor" value="esp" />
+                <label for="Espeakpoor">พอใช้</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textReadENG">อ่าน</label>
+              </td>
+              <td>
+                <input name="readENG" type="radio" id="Ereadexcellent" value="ere" />
+                <label for="Ereadexcellent">ดีมาก</label>
+                <input name="readENG" type="radio" id="Ereadgood" value="erg" />
+                <label for="Ereadgood">ดี</label>
+                <input name="readENG" type="radio" id="Ereadpoor" value="erp" />
+                <label for="Ereadpoor">พอใช้</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label for="textWriteENG">เขียน</label>
+              </td>
+              <td>
+                <input name="writeENG" type="radio" id="Ewriteexcellent" value="ewe" />
+                <label for="Ewriteexcellent">ดีมาก</label>
+                <input name="writeENG" type="radio" id="Ewritegood" value="ewg" />
+                <label for="Ewritegood">ดี</label>
+                <input name="writeENG" type="radio" id="Ewritepoor" value="ewp" />
+                <label for="Ewritepoor">พอใช้</label>
+              </td>
+            </tr>
+          </table>
+        </center>
+        </fieldset>
+
+        <fieldset><legend>ภาษาอื่น ๆ</legend>
+          <center>
+            <table border="0" width=80%>
+              <tr>
+                <td>
+                <label for="textOtherLanguages">ภาษาอื่น ๆ ระบุ</label>
+                </td>
+                <td>
+                  <input type="text" name="textOtherLanguage" maxlength="20" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                <label for="textSpeakOL">พูด</label>
+                </td>
+                <td>
+                  <input name="speakOL" type="radio" id="Ospeakexcellent" value="ose" />
+                  <label for="Ospeakexcellent">ดีมาก</label>
+                  <input name="speakOL" type="radio" id="Ospeakgood" value="osg" />
+                  <label for="Ospeakgood">ดี</label>
+                  <input name="speakOL" type="radio" id="Ospeakpoor" value="osp" />
+                  <label for="Ospeakpoor">พอใช้</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                <label for="textReadOL">อ่าน</label>
+                </td>
+                <td>
+                  <input name="readOL" type="radio" id="Oreadexcellent" value="ore" />
+                  <label for="Oreadexcellent">ดีมาก</label>
+                  <input name="readOL" type="radio" id="Oreadgood" value="org" />
+                  <label for="Oreadgood">ดี</label>
+                  <input name="readOL" type="radio" id="Oreadpoor" value="orp" />
+                  <label for="Oreadpoor">พอใช้</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                <label for="textWriteOL">เขียน</label>
+                </td>
+                <td>
+                  <input name="writeOL" type="radio" id="Owriteexcellent" value="owe" />
+                  <label for="Owriteexcellent">ดีมาก</label>
+                  <input name="writeOL" type="radio" id="Owritegood" value="owg" />
+                  <label for="Owritegood">ดี</label>
+                  <input name="writeOL" type="radio" id="Owritepoor" value="owp" />
+                  <label for="Owritepoor">พอใช้</label>
+                </td>
+              </tr>
+
+
+            </table>
+          </center>
+        </fieldset>
+
+      </fieldset>
+
+      <fieldset><legend>ความรูทางคอมพิวเตอร</legend>
+        <center>
+          <table border="0" width=80%>
+            <tr>
+              <td>
+              <label for="textComKnowledge">ความรูทางคอมพิวเตอร ระบุ</label>
+              </td>
+              <td>
+                <input type="text" name="textComKnowledge" maxlength="100" />
+              </td>
+            </tr>
+          </table>
+        </center>
+      </fieldset>
+
+      <fieldset><legend>ผลงานทางวิชาการ</legend>
+        <center>
+          <table border="0" width=80%>
+            <tr>
+              <td>
+              <label for="textAcademic">ผลงานทางวิชาการ ระบุ</label>
+              </td>
+              <td>
+                <input type="text" name="textAcademic" maxlength="100" />
+              </td>
+            </tr>
+          </table>
+        </center>
+      </fieldset>
+
+      <fieldset><legend>ประสบการณพิเศษอื่น ๆ</legend>
+        <center>
+          <table border="0" width=80%>
+            <tr>
+              <td>
+              <label for="textExp">ประสบการณพิเศษอื่น ๆ ระบุ</label>
+              </td>
+              <td>
+                <input type="text" name="textExp" maxlength="100" />
+              </td>
+            </tr>
+          </table>
+        </center>
+      </fieldset>
+
+
+    </td>
+  </tr>
+</body>
+</html>
